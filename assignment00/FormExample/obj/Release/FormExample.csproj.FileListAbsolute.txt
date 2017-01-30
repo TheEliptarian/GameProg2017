@@ -1,0 +1,9 @@
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\bin\Release\FormExample.exe.config
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\bin\Release\FormExample.exe
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\bin\Release\FormExample.pdb
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\obj\Release\FormExample.csprojResolveAssemblyReference.cache
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\obj\Release\FormExample.Form1.resources
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\obj\Release\FormExample.Properties.Resources.resources
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\obj\Release\FormExample.csproj.GenerateResource.Cache
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\obj\Release\FormExample.exe
+C:\Users\bgree\Desktop\CP\Game Programming\Game-Programming-Spring-2017--master\assignment00\FormExample\obj\Release\FormExample.pdb
