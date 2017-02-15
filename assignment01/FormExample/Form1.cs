@@ -54,7 +54,19 @@ namespace FormExample
         {
             if (e.KeyCode == Keys.W)
             {
-                counter += 50;
+                counter++;
+            }
+            else if (e.KeyCode == Keys.Q)
+            {
+                counter += 100;
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                counter--;
+            }
+            else if (e.KeyCode == Keys.A)
+            {
+                counter -= 100;
             }
             else if (e.KeyCode == Keys.C)
             {
@@ -94,7 +106,7 @@ namespace FormExample
 
         private static void CalcAnim()
         {
-            v = (int)(200 + 100 * Math.Cos(DateTime.Now.Millisecond / 500.0));
+            v = (int)(200 + 200 * Math.Sin(DateTime.Now.Millisecond / 500.0));
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -109,8 +121,25 @@ namespace FormExample
                 Color rndclr = Color.FromArgb(rng.Next(256), rng.Next(256), rng.Next(256));
                 SolidBrush brush = new SolidBrush(rndclr);
                 if (n % 5 == 0) n = 0;
-               
-                Rectangle x = new Rectangle(0, 0, v, v);
+
+                Rectangle x = new Rectangle();
+
+                if (i % 4 == 0)
+                {
+                    x = new Rectangle(0 + i, 0 + i, v, v);
+                }
+                else if (i % 4 == 1)
+                {
+                    x = new Rectangle(ClientSize.Width - v - i, ClientSize.Height - v - i, v, v);
+                }
+                else if (i % 4 == 2)
+                {
+                    x = new Rectangle(ClientSize.Width - v - i, 0 + i, v, v);
+                }
+                else if (i % 4 == 3)
+                {
+                    x = new Rectangle(0 + i, ClientSize.Height - v - i, v, v);
+                }
                 e.Graphics.DrawRectangle(Pens.Black, x);
                 if (color)
                 {
@@ -120,7 +149,7 @@ namespace FormExample
             }
             System.Drawing.Font font = new System.Drawing.Font("Verdana", 12);
             e.Graphics.DrawString(counter.ToString(), font, Brushes.Black, 50, 50);
-            e.Graphics.DrawString(running_fps.ToString(), font, Brushes.Black, 50, 0 + ClientSize.Height - 50);
+            e.Graphics.DrawString(((int)(running_fps)).ToString(), font, Brushes.Black, 50, 0 + ClientSize.Height - 50);
         }
 
 
