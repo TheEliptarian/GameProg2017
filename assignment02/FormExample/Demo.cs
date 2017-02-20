@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace FormExample
 {
-    class Demo : Sprite
+    public class Demo : Sprite
     {
 
         private Image image;
@@ -17,17 +17,26 @@ namespace FormExample
             set {image = value; }
         }
 
-        Thread rendHeaven;
-        Thread update;
-
-        public override void act()
+        public void Act(Form1 f)
         {
-           
-        }
+			base.Act();
+			int a = 0;
+			if ((a%100) < 50)
+			{
+				this.X++;
+				this.Y++;
+			}
+			else
+			{
+				this.X--;
+				this.Y--;
+			}
+			a++;
+		}
 
         public override void paint(Graphics g)
         {
-            g.DrawImage(image, this.X, this.Y);
+            g.DrawImage(image, X, Y);
         }
 
     }

@@ -10,7 +10,8 @@ namespace FormExample
     public partial class Form1 : Form
     {
         public static Form form;
-        public static Thread thread;
+        public static Thread rendHeaven;
+		public static Demo Demo = new Demo();
 
         public static int counter = 1;
         public static bool color = false;
@@ -23,9 +24,41 @@ namespace FormExample
             InitializeComponent();
             DoubleBuffered = true;
             form = this;
-        }
+			Demo.Image = FormExample.Properties.Resources.download;
+			Demo.X = (ClientSize.Width / 2);
+			Demo.Y = (ClientSize.Height / 2);
+			rendHeaven = new Thread(new ThreadStart(Update));
+			rendHeaven.Start();
+		}
 
-        private void Form1_Load(Object sender, EventArgs e)
+		protected override void OnClosed(EventArgs e)
+		{
+			base.OnClosed(e);
+			rendHeaven.Abort();
+		}
+
+		public static void Update()
+		{
+			DateTime last = DateTime.Now;
+			DateTime now = last;
+			TimeSpan frameTime = new TimeSpan(10000000 / fps);
+			while(true)
+			{
+				DateTime temp = DateTime.Now;
+				running_fps = .9 * running_fps + .1 * 1000.0 / (temp - now).TotalMilliseconds;
+				Console.WriteLine(running_fps);
+				now = temp;
+				TimeSpan diff = now - last;
+				if(diff.TotalMilliseconds < frameTime.TotalMilliseconds)
+				{
+					Thread.Sleep((frameTime - diff).Milliseconds);
+				}
+				last = DateTime.Now;
+				form.Invoke(new MethodInvoker(form.Refresh));
+			}
+		}
+
+		private void Form1_Load(Object sender, EventArgs e)
         { }
 
         protected override void OnKeyDown(KeyEventArgs e)
@@ -35,11 +68,6 @@ namespace FormExample
         private void UpdateSize()
         {
 
-        }
-
-        protected override void OnClosed(EventArgs e)
-        {
-            base.OnClosed(e);
         }
 
         protected override void OnResize(EventArgs e)
@@ -62,6 +90,8 @@ namespace FormExample
         }
         protected override void OnPaint(PaintEventArgs e)
         {
+			Demo.Act(this);
+			Demo.render(e.Graphics);
         }
 
     }

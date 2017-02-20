@@ -152,7 +152,10 @@ namespace FormExample
             e.Graphics.DrawString(((int)(running_fps)).ToString(), font, Brushes.Black, 50, 0 + ClientSize.Height - 50);
         }
 
+		private void Form1_Load(object sender, EventArgs e)
+		{
 
-    }
+		}
+	}
     
 }

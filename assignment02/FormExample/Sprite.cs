@@ -73,9 +73,8 @@ namespace FormExample
 
         }
 
-        public virtual void act()
+        public virtual void Act()
         {
-
         }
 
         public void add(Sprite s)
