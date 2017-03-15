@@ -25,8 +25,8 @@ namespace FormExample
             DoubleBuffered = true;
             form = this;
 			Demo.Image = FormExample.Properties.Resources.download;
-			Demo.X = (ClientSize.Width / 2);
-			Demo.Y = (ClientSize.Height / 2);
+			Demo.X = (50);
+			Demo.Y = (50);
 			rendHeaven = new Thread(new ThreadStart(Update));
 			rendHeaven.Start();
 		}
@@ -55,6 +55,7 @@ namespace FormExample
 				}
 				last = DateTime.Now;
 				form.Invoke(new MethodInvoker(form.Refresh));
+				Demo.Act(DateTime.Now.Millisecond);
 			}
 		}
 
@@ -90,7 +91,6 @@ namespace FormExample
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-			Demo.Act(this);
 			Demo.render(e.Graphics);
         }
 

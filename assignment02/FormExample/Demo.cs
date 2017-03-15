@@ -9,27 +9,27 @@ namespace FormExample
 {
     public class Demo : Sprite
     {
-
-        private Image image;
+		int a = 0;
+		private Image image;
         public Image Image
         {
             get {return image;  }
             set {image = value; }
         }
 
-        public void Act(Form1 f)
+        public void Act(int amount)
         {
 			base.Act();
-			int a = 0;
+			
 			if ((a%100) < 50)
 			{
-				this.X++;
-				this.Y++;
+				this.X += amount;
+				this.Y += amount;
 			}
 			else
 			{
-				this.X--;
-				this.Y--;
+				this.X -= amount;
+				this.Y -= amount;
 			}
 			a++;
 		}
