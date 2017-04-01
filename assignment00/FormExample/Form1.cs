@@ -211,7 +211,7 @@ namespace FormExample
                 for (int j = 0; j < 3; j++)
                 {
                     Rectangle rect = new Rectangle(x + i * cellSize, y + j * cellSize, cellSize, cellSize);
-                    e.Graphics.DrawRectangle(Pens.AntiqueWhite, rect);
+                   e.Graphics.DrawRectangle(Pens.AntiqueWhite, rect);
                     System.Drawing.Font font = new System.Drawing.Font("Ubuntu", cellSize * 3 * 72 / 96 / 4);
                     if (board[j][i] == 1)
                     {

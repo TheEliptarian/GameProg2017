@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF743918-152A-4D4F-9F7E-BBF79B454972}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>assignment04</RootNamespace>
+    <AssemblyName>assignment04</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Demo.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="StaticSprite.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\crate_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\environment_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ground_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ground_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ground_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ground_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ground_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ground_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\player_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level3.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level4.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level5.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
