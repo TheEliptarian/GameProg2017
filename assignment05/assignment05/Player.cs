@@ -16,7 +16,7 @@ namespace assignment05
     {
         
         public DateTime lastshot=DateTime.Now;
-        public TimeSpan firerate = new TimeSpan(0, 0, 1);
+      //  public TimeSpan firerate = new TimeSpan(0, 0, 1);
 
         public Player(int x, int y) : base(Properties.Resources.player, x, y)
         {
@@ -50,7 +50,6 @@ namespace assignment05
         public void shoot(int dir)
         {
             if (!Engine.alive) return;
-            if (DateTime.Now - lastshot <= firerate) return;
             Bullet1 bullet = new Bullet1((int)(X + 2 * width * Scale * 1.1f), (int)(Y + height * Scale / 2));
             bullet.X = X + 2 * width * Scale * 1.1f;
             bullet.Y = Y + height * Scale / 2;

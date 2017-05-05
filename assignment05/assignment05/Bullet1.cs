@@ -34,7 +34,7 @@ namespace assignment05
                 if (s.GetType() == typeof(Enemy))
                 {
                     s.Kill();
-					Engine.win = true;
+					Engine.enemyCount--;
                 }
             }
             if (list.Count > 0) this.Kill();

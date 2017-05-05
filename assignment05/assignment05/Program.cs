@@ -45,6 +45,7 @@ namespace assignment05
 				canvas.csAdd(box);
 			}
 			Program.canvas.csAdd(enemy);
+			Program.canvas.csAdd(enemy1);
 			Application.Run(new Program());
 		}
 

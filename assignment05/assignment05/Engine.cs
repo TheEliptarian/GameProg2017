@@ -18,8 +18,9 @@ namespace assignment05
 		public static Player player = new Player(150, 500);
 		public static Sprite canvas = new Sprite();
 		public static  bool alive = true;
-		public static int enemyCount = 0;
+		public static int enemyCount = 2;
 		public static Enemy enemy = new Enemy(850, 500);
+		public static Enemy enemy1 = new Enemy(500, 325);
 		public static Rectangle rect = new Rectangle(0, 0, 1400, 900, 200);
 		public static bool win = false;
 		public static bool lose = false;
@@ -57,7 +58,6 @@ namespace assignment05
 			canvas.add(rect);
 			canvas.add(text);
 			canvas.add(loss);
-			enemyCount++;
 		}
 
 		public static void reset()
@@ -94,8 +94,10 @@ namespace assignment05
 				canvas.csAdd(box);
 			}
 			enemy = new Enemy(850, 500);
-			enemyCount = 1;
+			enemy1 = new Enemy(500, 325); 
+			enemyCount = 2;
 			canvas.csAdd(enemy);
+			canvas.csAdd(enemy1);
 			canvas.add(rect);
 			canvas.add(text);
 			canvas.add(loss);
@@ -118,7 +120,7 @@ namespace assignment05
 				last = DateTime.Now;
 				if (resetting) continue;
 				rendering = true;
-				if (win)
+				if (enemyCount <= 0)
 				{
 					rect.setColor(Rectangle.initColor);
 					rect.setVisibility(true);
