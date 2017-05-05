@@ -25,7 +25,7 @@ namespace assignment05
 		{
 
 			Bullet bullet = new Bullet((int)(X + Width * Scale * 1.1f), (int)(Y + Height * Scale / 2));
-			if (left)
+			if (Engine.player.X < X)
 			{
 				bullet.X = X - 26;
 				bullet.Vx *= -1;
@@ -59,12 +59,13 @@ namespace assignment05
 				}
 			}
 		}
-
+	
 		public override void act()
 		{
 			base.act();
 			killCharacter();
-			//if (r.NextDouble() < .01) Vy = -20;
+			if (r.NextDouble() < .005) Vy = -10;
+			//if (r.NextDouble() < .005) Shoot();
 			if (isWall()) Vx *= -1;
 			if (Vx < 0) left = true;
 			if (Vx > 0) left = false;

@@ -34,6 +34,16 @@ namespace assignment05
 				box = new Box(1200, i * 100);
 				canvas.csAdd(box);
 			}
+			for (int i = 3; i < 6; i++)
+			{
+				Box box = new Box(i * 100, 400);
+				canvas.csAdd(box);
+			}
+			for (int i = 8; i < 11; i++)
+			{
+				Box box = new Box(i * 100, 300);
+				canvas.csAdd(box);
+			}
 			Program.canvas.csAdd(enemy);
 			Application.Run(new Program());
 		}
