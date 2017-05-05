@@ -5,43 +5,37 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Collections.Generic;
 
-namespace assignment04
+namespace assignment05
 {
-    public class Demo : Sprite
+    public class Slider : Sprite
     {
 		public int TargetX = 100, TargetY = 100, Velocity = 10;
 
-		public Demo(Image img)
+		public Slider(Image img)
 		{
 			Image = img;
 			X = 100;
 			Y = 100;
-			isDemo = true;
 		}
 
-		public Demo (Image img, int x, int y)
+		public Slider (Image img, int x, int y)
 		{
 			Image = img;
 			X = x;
 			Y = y;
 			TargetX = x;
 			TargetY = y;
-			isDemo = true;
 		}
 
         private Image image;
         public Image Image
         {
-            get {return image;  }
-            set
-			{
-				image = value;
-				if (image == Properties.Resources.final || image == Properties.Resources.box1final) correct = true;
-			}
+            get {return image;}
+            set {image = value;}
         }
 
-        public override void Act()
-        {
+		public override void act()
+		{
 			if (X + Velocity < TargetX)
 			{
 				X += Velocity;
@@ -50,7 +44,7 @@ namespace assignment04
 			{
 				X -= Velocity;
 			}
-			else if(Math.Abs(X-TargetX) <= Velocity)
+			else if (Math.Abs(X - TargetX) <= Velocity)
 			{
 				X = TargetX;
 			}
@@ -66,14 +60,10 @@ namespace assignment04
 			{
 				Y = TargetY;
 			}
-			if (X == TargetX && Y == TargetY)
-			{
-				Velocity = 10;
-			}
-			else Velocity += 10;
+
 		}
 
-        public override void paint(Graphics g)
+		public override void paint(Graphics g)
         {
             g.DrawImage(image, 0, 0);
         }
